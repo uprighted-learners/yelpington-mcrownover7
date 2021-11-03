@@ -1,0 +1,11 @@
+<script>
+
+fetch('city-market.md')
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(myText) {
+    console.log(myText);
+  });
+
+</script>
