@@ -1,9 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import Map from "./components/Map";
 
 function App() {
+  const [center, setCenter] = useState([40.4406, -79.9959]);
+
+  useEffect(() => {
+    fetch("");
+  });
   return (
-    <h1>Yelpington</h1>
+    <div>
+      <h1>Yelpington</h1>
+      <Map center={center} setCenter={setCenter} />{" "}
+    </div>
   );
 }
 
