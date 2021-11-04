@@ -1,24 +1,30 @@
 //setting up the server and setting the port to 5000
 const express = require("express");
+const path = require("path")
 const app = express();
 const port = process.env.PORT || 5000;
+
+const restDir = path.resolve("./api")
 
 //using urlencoded to clean up urls and static referenced to client/build
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./client/build"));
 
-// let idMatch
-
-//routing /check and sending the file for answers.json that is needed in app.js
-// app.get("/restaurant-page/:id", (req, res) => {
-//     idMatch = 
-//   res.sendFile(__dirname + "/client/build/");
-// });
-
 //routing / to send back the index.html from inside the build directory
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/client/build/index.html");
 });
+
+//routing /api to api endpoint of the directory with all restaurants in json format
+app.get("/api", (req, res) => {
+    res.sendFile(__dirname + "/api/directory.json")
+})
+
+//routing to api endpoint for single restaurant matching the id provided in url
+app.get("/api/:id", (req, res) => {
+    let filePath = path.join(restDir, req.params.id + ".json")
+    res.sendFile(filePath)
+})
 
 //routing * to handle any non-set routes to a 404 page
 app.get("*", (req, res) => {
