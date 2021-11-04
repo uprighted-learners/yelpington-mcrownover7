@@ -33,3 +33,7 @@ app.get("*", (req, res) => {
 
 //listening on port 5000 and console logging a message to ensure it is listening
 app.listen(port, () => console.log(`Yelpington app listening port ${port}!`));
+
+//use context and reducer
+//framework loopback, nest.js
+//material design (UI) - chakra UI
