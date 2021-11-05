@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useEffect, useState } from "react";
 import L from 'leaflet';
 import icon from "leaflet/dist/images/marker-icon.png";
@@ -10,70 +10,6 @@ let DefaultIcon = L.icon({
 });
 
 function Map(props) {
-  // const [markerLocations, setMarkerLocations] = useState([]);
-  // const [markerKey, setMarkerKey] = useState([]);
-  // const [restaurantName, setRestaurantName] = useState("");
-  // const [restaurantLat, setRestaurantLat] = useState("");
-  // const [restaurantLon, setRestaurantLon] = useState("");
-
-  // useEffect(() => {
-  //   let tempName;
-  //   let tempLat;
-  //   let tempLon;
-  //   props.restaurantDir.forEach((element) => {
-  //     fetch(`/api/${element}`)
-  //       .then((res) => res.json())
-  //       .then((restArray) => {
-  //         tempName = restArray.name;
-  //         tempLat = restArray.latitude;
-  //         tempLon = restArray.longitude;
-  //         console.log(restArray.name);
-  //         props.markerKey.push(tempName);
-  //         props.markerLocations.push([tempLat, tempLon]);
-  //         props.markerFull.push([tempName, tempLat, tempLon])
-  //       });
-  //   });
-  // }, [props.restaurantDir]);
-
-  // if (props.markerFull === []) {
-  //   return (
-  //     <MapContainer
-  //       center={props.center}
-  //       zoom={13}
-  //       style={{ height: "600px", width: "600px" }}
-  //     >
-  //       <TileLayer
-  //         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  //         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  //       />
-  //     </MapContainer>
-  //   );
-  // } else {  
-  //   return (
-  //   <MapContainer
-  //     center={props.center}
-  //     zoom={13}
-  //     style={{ height: "600px", width: "600px" }}
-  //   >
-  //     <TileLayer
-  //       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  //       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  //     />
-
-  //     {(props.markerFull.map((element) => {
-  //     // <Marker icon={DefaultIcon} key={element[0]} position={L.latLng([element[1], element[2]])} />}))} }
-  //      <Marker name={props.markerFull[0][0]} position={[props.markerFull[0][1], props.markerFull[0][2]]} />}))}
-  //   </MapContainer>
-  // );}
-
-//   if (props.markerFull === []) {
-//   return null
-// } else {
-//   props.markerFull.forEach((element) => {
-//     L.marker([element[1], element[2]]).addTo(Map)
-//   })
-// }
-
 // useEffect(() => {
 //   let tempName;
 //   let tempLat;
@@ -106,7 +42,7 @@ console.log(props.markerFull)
   return (
     <MapContainer
       center={props.center}
-      zoom={13}
+      zoom={12}
       style={{ height: "600px", width: "600px" }}
     >
       <TileLayer
@@ -114,7 +50,7 @@ console.log(props.markerFull)
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       {props.markerFull.length ? (props.markerFull.map((element, index) => {
-      return (<Marker key={index} name={element[0]} position={[element[1], element[2]]} />)})) : null }
+      return (<Marker key={index} name={element[0]} position={[element[1], element[2]]}> <Popup>{element[0]}</Popup></Marker>)})) : null }
     </MapContainer>
   );
 }
@@ -123,3 +59,4 @@ export default Map;
 
 //conditionally render the marker only if the page has fully loaded and the fetch are done.
 //NOTE: bug with react leaflet markers do not persist. If running on 3000 and a change is made in map.js the markers will display until the page is refreshed.
+//

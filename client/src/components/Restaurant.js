@@ -1,0 +1,1 @@
+//fetch on itself and grab from the url the name of the restaurant
