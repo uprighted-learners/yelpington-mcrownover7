@@ -1,14 +1,13 @@
 import "../App.css";
 import { useState, useEffect } from "react";
 import Map from "./Map";
-import { map } from "leaflet";
 
 import { Link, Outlet } from "react-router-dom";
 
 //attempt to globally declare tempArray to make it persist
 let tempArray = [];
 
-function App() {
+function Homepage() {
   const [center, setCenter] = useState([40.45025, -79.96231]);
   const [restaurantDir, setRestaurantDir] = useState([]);
 
@@ -63,6 +62,16 @@ function App() {
           }}
         >
           <Link to="/restaurant">Restaurant</Link>
+          <Link to="/restaurant/apteka">Apteka</Link>
+          <Link to="/restaurant/casa-brasil">Casa Brasil</Link>
+          <Link to="/restaurant/dish-osteria-bar">Dish Osteria Bar</Link>
+          <Link to="/restaurant/gaucho-parrilla-argentina">Gaucho Parrilla Argentina</Link>
+          <Link to="/restaurant/grist-house-craft-brewery">Grist House Craft Brewery</Link>
+          <Link to="/restaurant/hitchhiker-brewing">Hitchhiker Brewing</Link>
+          <Link to="/restaurant/noodlehead">Noodlehead</Link>
+          <Link to="/restaurant/penn-brewery">Penn Brewery</Link>
+          <Link to="/restaurant/point-brugge-cafe">Point Brugge Cafe</Link>
+          <Link to="/restaurant/the-commoner">The Commoner</Link>
         </nav>
         <form onSubmit={onSubmit}>
           <input type="submit" />
@@ -83,4 +92,4 @@ function App() {
   );
 }
 
-export default App;
+export default Homepage;

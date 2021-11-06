@@ -11,6 +11,16 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/restaurant" element={<Restaurant />} />
+          <Route path="/restaurant/apteka" element={<Restaurant />} />
+          <Route path="/restaurant/casa-brasil" element={<Restaurant />} />
+          <Route path="/restaurant/dish-osteria-bar" element={<Restaurant />} />
+          <Route path="/restaurant/gaucho-parrilla-argentina" element={<Restaurant />} />
+          <Route path="/restaurant/grist-house-craft-brewery" element={<Restaurant />} />
+          <Route path="/restaurant/hitchhiker-brewing" element={<Restaurant />} />
+          <Route path="/restaurant/noodlehead" element={<Restaurant />} />
+          <Route path="/restaurant/penn-brewery" element={<Restaurant />} />
+          <Route path="/restaurant/point-brugge-cafe" element={<Restaurant />} />
+          <Route path="/restaurant/the-commoner" element={<Restaurant />} />
         </Routes>
       </BrowserRouter>
     </>
