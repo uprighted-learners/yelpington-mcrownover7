@@ -38,8 +38,6 @@ function Homepage() {
 
           tempArray.push([tempName, tempLat, tempLon]);
         });
-      // setMarkerLocations(markerLocations.push([tempLat, tempLon]));
-      // setMarkerKey(markerKey.push(tempName));
     });
     setMarkerFull(tempArray);
   }, [restaurantDir]);
