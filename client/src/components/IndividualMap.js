@@ -21,6 +21,7 @@ function Map(props) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
+      {/* setting marker based on the passed in name and center from the restaurant fetch */}
       <Marker position={props.center}>
         <Popup>{props.name}</Popup>
       </Marker>
@@ -29,6 +30,3 @@ function Map(props) {
 }
 
 export default Map;
-
-//NOTE: bug with react leaflet markers do not persist. If running on 3000 and a change is made in map.js the markers will display until the page is refreshed.
-//
