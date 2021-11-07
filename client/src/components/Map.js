@@ -35,7 +35,4 @@ function Map(props) {
 
 export default Map;
 
-//conditionally render the marker only if the page has fully loaded and the fetch are done.
 //NOTE: bug with react leaflet markers do not persist. If running on 3000 and a change is made in map.js the markers will display until the page is refreshed.
-//
-//

@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path")
 const app = express();
+const fs = require('fs')
 const port = process.env.PORT || 5000;
 
 const restDir = path.resolve("./api")
@@ -26,6 +27,33 @@ app.get("/api/:id", (req, res) => {
     res.sendFile(filePath)
 })
 
+// //routing post from comments
+// app.post("/articles", (req, res) => {
+//   createComment(nextCommentId(), req.body, res)
+// })
+
+// // Pick an unused article id.
+// function nextCommentId() {
+//   let articles = allArticles();
+
+//   // find the highest id...
+//   let id = articles[articles.length - 1].id;
+
+//   // ...and pick a higher one
+//   let articleId = id + 1;
+//   return articleId;
+// }
+
+// function createComment(params, res) {
+//   let comment ={
+//     id: params.restName,
+//     username: params.username.trim(),
+//     commentText: params.comment.trim()
+//   }
+
+//   let commentDataFile = path.join()
+// }
+
 //routing * to handle any non-set routes to a 404 page
 app.get("*", (req, res) => {
   res.send(`<h3>404: Whoops, something went wrong...</h3>`);
@@ -33,7 +61,3 @@ app.get("*", (req, res) => {
 
 //listening on port 5000 and console logging a message to ensure it is listening
 app.listen(port, () => console.log(`Yelpington app listening port ${port}!`));
-
-//use context and reducer
-//framework loopback, nest.js
-//material design (UI) - chakra UI

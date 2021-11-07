@@ -12,9 +12,6 @@ function Homepage() {
   const [restaurantDir, setRestaurantDir] = useState([]);
 
   //declaring state variables for map markers
-  //NOTE: REMOVE KEY AND LOCATIONS
-  const [markerLocations, setMarkerLocations] = useState([]);
-  const [markerKey, setMarkerKey] = useState([]);
   const [markerFull, setMarkerFull] = useState([]);
 
   //fetch for /api to return a directory of the restaurant ids to be used for fetching from restaurant specific json files
@@ -105,8 +102,6 @@ function Homepage() {
           center={center}
           setCenter={setCenter}
           restaurantDir={restaurantDir}
-          markerKey={markerKey}
-          markerLocations={markerLocations}
           markerFull={markerFull}
           setMarkerFull={setMarkerFull}
         />{" "}

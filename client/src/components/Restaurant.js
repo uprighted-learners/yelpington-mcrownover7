@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import IndividualMap from "./IndividualMap";
 import "../App.css";
-import { Link } from "react-router-dom";
 
 function Restaurant() {
   //declaring state variables
@@ -76,7 +75,7 @@ function Restaurant() {
       </div>
       {/* calling the individual map and passing through the necessary variables */}
       <IndividualMap name={name} center={center} setCenter={setCenter} />{" "}
-      <form className='comment-section'>
+      {/* <form className='comment-section' method='POST' action='/comment'>
         <label for='username'>Username: 
         <input type='text' name='username' placeholder='Enter an Username!' id='username' /></label>
         <br />
@@ -84,7 +83,7 @@ function Restaurant() {
         <textarea name='comment' placeholder='Enter a Comment!' id='comment' /></label>
         <br />
         <input type='submit' />
-      </form>
+      </form> */}
     </div>
   );
 }

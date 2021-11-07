@@ -58,6 +58,7 @@ h2 {
   grid-template-columns: repeat(5, 1fr);
   border: 2px solid black;
   background-color: gold;
+  margin-bottom: 10px;
 }
 
 .nav-link {
@@ -75,7 +76,7 @@ h2 {
 .restaurant-info-box {
   display: grid;
   grid-template-columns: [first] 1fr [line2] 3fr;
-  margin: 5px;
+  margin: 10px;
   flex-wrap: wrap;
   border: 1px solid black;
 }
