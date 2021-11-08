@@ -1,0 +1,10 @@
+{
+  "id": "hitchhiker-brewing",
+  "name": "Hitchhiker Brewing",
+  "address": "1500 S. Canal St. #2541",
+  "phone number": "412-343-1950",
+  "hours": "4:00 pm - 10:00 pm",
+  "latitude": 40.49627,
+  "longitude": -79.9263,
+  "notes": ["Local brewery established in 2014, brewing primarily IPAs and Sours."]
+}

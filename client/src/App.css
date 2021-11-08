@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+body {
+  margin: 10px;
+  background-color: lightgrey;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading {
+  display: flex;
+  height: 12vh;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+  background-color: gold;
+  margin-bottom: 0.5em;
+  filter: drop-shadow(2px 2px 2px black);
+  text-shadow: 2px 2px 2px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#yelp-title {
+  font-size: 2vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#yelp-title:hover {
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0px;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.ind-rest-name {
+  font-size: 1.5vw;
+  margin: 5px;
+}
+
+.main-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  align-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.map-nav-area {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homepage-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 2px solid black;
+  background-color: gold;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  flex: 0 0 18%;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.nav-link:hover {
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+.restaurant-info-box {
+  display: grid;
+  grid-template-columns: [first] 1fr [line2] 3fr;
+  margin: 10px;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.restaurant-info {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.default {
+  text-align: center;
+  font-weight: bold;
 }

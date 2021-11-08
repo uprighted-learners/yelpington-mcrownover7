@@ -1,0 +1,10 @@
+{
+  "id": "penn-brewery",
+  "name": "Penn Brewery",
+  "address": "800 Vinial St.",
+  "phone number": "412-237-9400",
+  "hours": "12:00 pm - 10:00 pm",
+  "latitude": 40.45702,
+  "longitude": -79.99165,
+  "notes": ["Long-standing brewery features German-style brews, diverse comfort fare, regular live music & tours."]
+}
