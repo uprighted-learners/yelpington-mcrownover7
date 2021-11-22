@@ -34,5 +34,4 @@ function Map(props) {
 }
 
 export default Map;
-
 //NOTE: bug with react leaflet markers do not persist. If running on 3000 and a change is made in map.js the markers will display until the page is refreshed.

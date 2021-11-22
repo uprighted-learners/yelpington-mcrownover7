@@ -27,33 +27,6 @@ app.get("/api/:id", (req, res) => {
     res.sendFile(filePath)
 })
 
-// //routing post from comments
-// app.post("/articles", (req, res) => {
-//   createComment(nextCommentId(), req.body, res)
-// })
-
-// // Pick an unused article id.
-// function nextCommentId() {
-//   let articles = allArticles();
-
-//   // find the highest id...
-//   let id = articles[articles.length - 1].id;
-
-//   // ...and pick a higher one
-//   let articleId = id + 1;
-//   return articleId;
-// }
-
-// function createComment(params, res) {
-//   let comment ={
-//     id: params.restName,
-//     username: params.username.trim(),
-//     commentText: params.comment.trim()
-//   }
-
-//   let commentDataFile = path.join()
-// }
-
 //routing * to handle any non-set routes to a 404 page
 app.get("*", (req, res) => {
   res.send(`<h3>404: Whoops, something went wrong...</h3>`);

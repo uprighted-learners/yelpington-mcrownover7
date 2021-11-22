@@ -75,15 +75,6 @@ function Restaurant() {
       </div>
       {/* calling the individual map and passing through the necessary variables */}
       <IndividualMap name={name} center={center} setCenter={setCenter} />{" "}
-      {/* <form className='comment-section' method='POST' action='/comment'>
-        <label for='username'>Username: 
-        <input type='text' name='username' placeholder='Enter an Username!' id='username' /></label>
-        <br />
-        <label for='username'>Comment: 
-        <textarea name='comment' placeholder='Enter a Comment!' id='comment' /></label>
-        <br />
-        <input type='submit' />
-      </form> */}
     </div>
   );
 }
